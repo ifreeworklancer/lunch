@@ -1,0 +1,21 @@
+@mixin decorList($font-size, $color, $color-dots) {
+
+  li {
+    position: relative;
+    color: $color;
+    font-size: $font-size;
+    margin-bottom: 15px;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $color-dots;
+    }
+  }
+}

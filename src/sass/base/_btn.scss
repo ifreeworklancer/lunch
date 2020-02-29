@@ -1,0 +1,54 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: 700;
+  font-size: .875rem;
+  text-transform: uppercase;
+  transition: .5s;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    font-size: 1rem;
+  }
+
+  &-primary {
+    box-shadow: 0 5px 25px rgba($primary, 0.5);
+  }
+
+  &-outline-primary {
+    color: $secondary;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &-secondary {
+    box-shadow: 0 5px 25px rgba($secondary, 0.5);
+  }
+
+  &-additional {
+    width: 100%;
+    padding: $btn-padding-y 40px;
+    border-radius: 3px;
+    font-size: .75rem;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      fill: rgba($secondary, .6);
+      transition: .5s;
+    }
+
+    &:hover {
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}

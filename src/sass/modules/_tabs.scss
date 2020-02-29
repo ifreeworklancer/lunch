@@ -1,0 +1,70 @@
+.custom-tabs {
+  position: relative;
+
+  &-nav {
+    margin-bottom: 30px;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (min-width: map_get($grid-breakpoints, md)) {
+        justify-content: center;
+        flex-wrap: nowrap;
+      }
+
+      li {
+        width: 45%;
+        text-transform: none;
+        color: rgba($secondary, .35);
+        background: rgba($secondary, .15);
+        padding: 15px 35px;
+        font-size: .75rem;
+        cursor: pointer;
+        transition: .5s;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+          width: auto;
+          margin: 0 15px;
+          font-size: 1rem;
+          padding: $btn-padding-y $btn-padding-x;
+        }
+
+        &.active {
+          background: $primary;
+          color: #fff;
+        }
+
+        &:hover {
+          background: $primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &-body {
+    position: relative;
+
+    &-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: .5s linear;
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}

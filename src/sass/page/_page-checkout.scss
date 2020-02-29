@@ -1,0 +1,66 @@
+#checkout {
+  background: $gray-200;
+  padding: 100px 0 120px;
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .additional-info {
+    font-size: .75rem;
+    font-style: italic;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-left: 135px;
+      max-width: 360px;
+    }
+  }
+}
+
+.checkout-form {
+
+  .form-group {
+
+    &-radio {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 15px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        max-width: 320px;
+        margin-left: 135px;
+        flex-wrap: nowrap;
+      }
+
+      &--long {
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .btn {
+    margin-bottom: 25px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-left: 135px;
+    }
+  }
+
+  .custom-checkbox {
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-left: 135px;
+    }
+  }
+
+  &-item {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+}

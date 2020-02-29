@@ -1,0 +1,150 @@
+.form-group {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    display: flex;
+    align-items: center;
+  }
+
+  label {
+    margin-bottom: 3px;
+    font-size: .8125rem;
+    color: $secondary;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      min-width: 115px;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .form-control {
+    padding: 13px 25px 10px 8px;
+    height: auto;
+    font-size: .8125rem;
+    color: $secondary;
+    background: #fff;
+    border: 1px solid rgba($secondary, .3);
+    border-radius: 3px;
+    max-width: 320px;
+
+    &::placeholder {
+      color: rgba($secondary, .6);
+    }
+  }
+
+  &.in-focus {
+    border-color: #fff;
+
+    label {
+      color: $primary;
+    }
+  }
+
+  &--date {
+
+    .date-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 430px;
+      cursor: pointer;
+      z-index: 20;
+
+      svg {
+        fill: rgba($secondary, .6);
+      }
+    }
+  }
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+
+  label {
+    margin-right: 0;
+    font-size: .75rem;
+    min-width: 0;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+    }
+
+    &::after {
+      top: 50%;
+      left: -1.25rem;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    background: $primary;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background: #fff;
+    border-color: $secondary;
+  }
+}
+
+.custom-checkbox {
+
+
+  label {
+    margin-right: 0;
+    font-size: .75rem;
+    min-width: 0;
+
+    a {
+      border-bottom: 1px dashed $secondary;
+    }
+
+    &::before,
+    &::after {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.quantity {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 25px;
+  background: rgba($primary, .15);
+  user-select: none;
+
+  .quantity-up {
+    color: $primary;
+  }
+
+  &-input {
+    text-align: center;
+    pointer-events: none;
+    padding: 0 !important;
+    height: auto !important;
+    font-size: 1.125rem;
+    font-weight: 500;
+    background: transparent;
+  }
+
+  &-button {
+    font-weight: 500;
+    font-size: 1.125rem;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+#offer {
+  padding: 50px 0 70px;
+  background: url('../images/bg/offer-bg-mob.jpg') 50% 50% /cover no-repeat;
+  border-bottom: 1px solid rgba($secondary, .3);
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    background: url('../images/bg/offer-bg.jpg') 50% 50% /cover no-repeat;
+  }
+}
+
+.offer-item {
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__subtitle {
+    font-size: .875rem;
+    margin-bottom: 35px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: 1.125rem;
+    }
+  }
+}

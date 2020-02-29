@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400,400i,500,500i,600,800&display=swap&subset=cyrillic');
+
+@import "config/variables";
+@import "config/placeholders";
+@import "config/mixin";
+
+@import "~bootstrap/scss/bootstrap", "~flickity/dist/flickity.min.css";
+
+@import "base/body";
+@import "base/btn";
+@import "base/layout";
+
+@import "modules/forms";
+@import "modules/modal";
+@import "modules/slider";
+@import "modules/tabs";
+@import "modules/basket";
+@import "modules/breadcrumb";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/program";
+@import "layout/menu";
+@import "layout/extra";
+@import "layout/advantages";
+@import "layout/bonus";
+@import "layout/work";
+@import "layout/question";
+@import "layout/offer";
+@import "layout/reviews";
+@import "layout/footer";
+
+@import "page/page-checkout";

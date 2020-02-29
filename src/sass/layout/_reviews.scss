@@ -1,0 +1,141 @@
+#reviews {
+  padding: 80px 0 150px;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    display: none;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      display: flex;
+      width: 90%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      width: 80%;
+    }
+
+    @media (min-width: 1600px) {
+      width: 60%;
+    }
+
+    &-item {
+      background: #fff;
+      box-shadow: 0 0 25px 0 rgba($secondary, 0.1);
+    }
+  }
+}
+
+.reviews-slider {
+
+  .flickity-page-dots {
+
+    li {
+      width: 20px;
+      height: 20px;
+      background: $gray-200;
+      padding: 0 5px;
+      opacity: 1;
+
+      &.is-selected {
+        background: $primary;
+      }
+    }
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      display: none;
+    }
+  }
+
+  .flickity-slider {
+    display: flex;
+    align-items: flex-start;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      align-items: center;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    padding: 30px 25px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 80%;
+      padding: 30px 40px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      width: 60%;
+      padding: 30px 60px;
+    }
+
+    @media (min-width: 1600px) {
+      width: 40%;
+    }
+  }
+}
+
+.reviews-item {
+  padding: 25px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px 0 rgba($secondary, 0.1);
+  background: #fff;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__image {
+    @extend %img;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+    }
+  }
+
+  &__name {
+    font-size: 1rem;
+    margin-bottom: 4px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__position {
+    font-size: .75rem;
+    color: $primary;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: .875rem;
+    }
+  }
+
+  &__description {
+    font-size: .8125rem;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: .875rem;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+#advantages {
+  border-top: 1px solid rgba($secondary, .15);
+  padding: 90px 0;
+  z-index: 5;
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .advantages-image {
+    @extend %img;
+    position: absolute;
+    top: 0;
+    left: -500px;
+    bottom: 0;
+    width: 1000px;
+    opacity: .6;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      left: -300px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      opacity: 1;
+      left: -200px;
+    }
+
+
+    @media (min-width: 1800px) {
+      left: 0;
+    }
+  }
+}
+
+.advantages-item {
+
+  &-description {
+    margin-bottom: 40px;
+
+    ul {
+
+      li {
+        position: relative;
+        font-size: .875rem;
+        margin-bottom: 15px;
+        font-weight: 400;
+        padding-left: 40px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          background: url('../images/icons/decor-list.png') 50% 50% /cover no-repeat;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 1.125rem;
+    font-style: italic;
+  }
+}

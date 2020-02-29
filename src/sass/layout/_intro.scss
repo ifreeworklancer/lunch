@@ -1,0 +1,75 @@
+#intro {
+  margin-top: 64px;
+  padding: 190px 0;
+  background: url('../images/bg/intro-bg-mob.jpg') 50% 50% /cover no-repeat;
+  z-index: 5;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 200px 0 175px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, md)) {
+    margin-top: 98px;
+    background: url('../images/bg/intro-bg.jpg') 50% 50% /cover no-repeat;
+  }
+
+  .anchor-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: rgba($secondary, .25);
+      transition: .5s;
+    }
+
+    &:hover {
+
+      svg {
+        fill: rgba($secondary, 1);
+      }
+    }
+  }
+
+  .intro-logo {
+    @extend %img;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    padding-bottom: 95%;
+    z-index: -2;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 500px;
+      padding-bottom: 500px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.intro-item {
+  position: relative;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    font-size: .875rem;
+    margin-bottom: 50px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      font-size: 1.25rem;
+    }
+  }
+}

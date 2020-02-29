@@ -1,0 +1,74 @@
+body {
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.25rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+        font-size: 1.75rem;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+        font-size: $h1-font-size;
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+        font-size: 1.5rem;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+        font-size: $h2-font-size;
+    }
+}
+h3 {
+    font-size: 1.125rem;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        font-size: $h3-font-size;
+    }
+}
+
+
+a {
+    transition: 0.5s;
+}
+
+ul {
+    margin: 0;
+    @extend .list-unstyled;
+}
+
+figure {
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}

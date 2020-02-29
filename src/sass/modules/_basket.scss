@@ -1,0 +1,255 @@
+.basket-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 68px;
+  transform: translateY(-250%);
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding-top: 98px;
+  }
+
+  &.is-scroll {
+    padding-top: 68px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      padding-top: 79px;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  &-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 470px;
+    background: #fff;
+    box-shadow: 0 0 25px 0 rgba($secondary, 0.1);
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-left: auto;
+      margin-right: -15px;
+    }
+
+    @media (min-width: 1600px) {
+      margin-right: -215px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      right: 12px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 17.5px 15px 17.5px;
+      border-color: transparent transparent #fff transparent;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        right: 32px;
+      }
+
+      @media (min-width: 1600px) {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-header {
+    margin-bottom: 10px;
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .btn {
+      padding: 15px 40px;
+      font-size: .8125rem;
+      margin-left: auto;
+    }
+  }
+
+  &-total {
+    margin-bottom: 10px;
+
+    &__title {
+      font-size: .875rem;
+    }
+
+    &__value {
+      font-size: .875rem;
+      font-weight: 600;
+
+      span {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.basket-card {
+  background: #fff;
+  box-shadow: 0 0 25px 0 rgba($secondary, 0.1);
+  padding: 10px 5px 15px;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 25px 20px 35px;
+  }
+
+  .additional-info {
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      margin-left: 30px !important;
+      max-width: 100% !important;
+    }
+  }
+
+  &-header {
+    margin-bottom: 15px;
+  }
+
+  &-body {
+    margin-bottom: 25px;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  &-additional {
+    margin-top: 20px;
+
+    .btn-additional {
+      margin-bottom: 15px;
+    }
+
+    .basket-item {
+
+      &:last-of-type {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &-total {
+
+    &--delivery {
+      font-size: .875rem;
+
+      .basket-card-total__value {
+        padding-left: 10px;
+      }
+    }
+
+    &--product {
+      margin-bottom: 15px;
+
+      .basket-card-total__title {
+        font-size: 1rem;
+      }
+
+      .basket-card-total__value {
+        padding-left: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba($secondary, .3);
+
+  .quantity {
+    width: 95px;
+    height: 30px;
+    padding: 0 13px;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      width: 120px;
+      padding: 0 20px;
+    }
+  }
+
+  .product-price {
+    text-align: center;
+    font-size: .75rem;
+    padding-left: 5px;
+
+    span {
+      font-size: .875rem;
+    }
+  }
+
+  &-close {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $secondary;
+    border-radius: 50%;
+    opacity: .6;
+    cursor: pointer;
+    transition: .5s;
+
+    .line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 1px;
+      background: $secondary;
+
+      &--left {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &--right {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    width: 170px;
+    font-size: .8125rem;
+    padding-right: 5px;
+  }
+}
