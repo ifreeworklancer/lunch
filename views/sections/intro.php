@@ -10,7 +10,7 @@
                     <p class="intro-item__subtitle">
                         <?= $intro['subtitle']; ?>
                     </p>
-                    <a href="#" class="btn btn-primary">
+                    <a href="../../page-checkout.php" class="btn btn-primary">
                         заказать
                     </a>
                 </div>

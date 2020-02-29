@@ -13,7 +13,7 @@
                     <div class="bonus-item-description">
                         <?= $bonus['description']; ?>
                     </div>
-                    <a href="#" class="btn btn-secondary">
+                    <a href="../../page-checkout.php" class="btn btn-secondary">
                         заказать
                     </a>
                 </div>

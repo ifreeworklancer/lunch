@@ -34,7 +34,7 @@
                                 <span><?= $item['price']; ?></span> грн
                             </div>
                         </div>
-                        <a href="#" class="btn btn-outline-primary w-100">
+                        <a href="../../page-checkout.php" class="btn btn-outline-primary w-100">
                             в корзину
                         </a>
                     </div>

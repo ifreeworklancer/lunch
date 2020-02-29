@@ -85,7 +85,7 @@
                                 грн
                             </span>
                         </div>
-                        <a href="#" class="btn btn-primary">
+                        <a href="../../page-checkout.php" class="btn btn-primary">
                             Оформить заказ
                         </a>
                     </div>

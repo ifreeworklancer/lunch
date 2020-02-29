@@ -77,7 +77,7 @@
                                                             </ul>
                                                         </div>
                                                     <?php endforeach; ?>
-                                                    <a href="#" class="btn btn-primary">
+                                                    <a href="../../page-checkout.php" class="btn btn-primary">
                                                         Заказать
                                                     </a>
                                                 </div>
